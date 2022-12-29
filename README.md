@@ -6,7 +6,7 @@
 
 ## **Table of Contents**
 
-1. [Introduction to C](introductionToC.md)
+1. Introduction to C
 2. Variables and types
 3. Constants
 4. Operators
@@ -27,3 +27,9 @@
 19. Header files
 20. The preprocessor
 21. Conclusion
+
+<h2 align=center>Introduction to C</center>
+<hr />
+<p>
+Hello World!
+</p>
