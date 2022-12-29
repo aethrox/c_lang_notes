@@ -28,7 +28,7 @@
 20. The preprocessor
 21. Conclusion
 
-<h2 align=center>Introduction to C</center>
+<h2 align=center>Introduction to C</h2>
 
 ---
 
