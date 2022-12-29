@@ -29,7 +29,8 @@
 21. Conclusion
 
 <h2 align=center>Introduction to C</center>
-<hr />
+
+---
 
 ```c
 #include <stdio.h> //Programımıza stdio.h kütüphanesi ile I/O fonksiyonlarını dahil ediyoruz.
