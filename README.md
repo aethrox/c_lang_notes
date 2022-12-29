@@ -1,2 +1,1 @@
-# c_lang_notes
-C Language Lecture Notes
+<h1 align=center> C Language Lecture Notes </h1>
