@@ -30,6 +30,16 @@
 
 <h2 align=center>Introduction to C</center>
 <hr />
-<p>
-Hello World!
-</p>
+
+```c
+#include <stdio.h> //Programımıza stdio.h kütüphanesi ile I/O fonksiyonlarını dahil ediyoruz.
+
+int main(void){ // "main()" programımızın ana fonksiyonudur.
+
+  printf("Hello World!"); //"printf()" stdio.h kütüphanesi içerisinde ki ekrana çıktı vermemizi sağlayan fonksiyondur.
+
+  return 0;
+}
+```
+
+> Note:
