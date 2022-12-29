@@ -6,7 +6,7 @@
 
 ## **Table of Contents**
 
-1. Introduction to C
+1. [Introduction to C]("introductionToC.md")
 2. Variables and types
 3. Constants
 4. Operators
