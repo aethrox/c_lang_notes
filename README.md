@@ -3,3 +3,27 @@
 <p align=center>
   <img width=170 src="./images/c_lang_logo.svg" />
 </p>
+
+## **Table of Contents**
+
+1. Introduction to C
+2. Variables and types
+3. Constants
+4. Operators
+5. Conditionals
+6. Loops
+7. Arrays
+8. Strings
+9. Pointers
+10. Functions
+11. Input and output
+12. Variables scope
+13. Static variables
+14. Global variables
+15. Type definitions
+16. Enumerated Types
+17. Structures
+18. Command line parameters
+19. Header files
+20. The preprocessor
+21. Conclusion
