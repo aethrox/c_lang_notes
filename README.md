@@ -112,3 +112,77 @@ Sağlıklı bir kod için yazım kurallarını bilelim lütfen 😉
 <h2 align=center> Variables and Types </h2>
 
 ---
+
+C statik olarak yazılmış bir programlama dilidir. Yani her bir değişken tanımlamamızda değişkenin tipini belirtmemiz gerekiyor. Bunun sebebi programı derlediğimiz zaman C'nin değişken tipini bilmesi gerekiyor.
+
+> Örnek: `ìnt age;`
+
+Tanımlama yapıldıktan sonra artık değişkenimize tipine bağlı olarak istediğimiz değeri atayabiliriz.
+
+> Örnek: `age = 10;`
+
+Eğer isterseniz değişken tanımlaması yapıyorken bile değer ataması yapabilirsiniz.
+
+> Örnek: `int age = 10;`
+
+Değişken tiplerimiz şunlardır:
+
+- int
+- char
+- short
+- long
+- float
+- double
+- long double
+
+Tamsayı tanımlaması yaparken aşağıdaki 4 türü kullanırız.
+
+- int
+- short
+- long
+- char
+
+Çoğu zaman `int` kullanıyoruz fakat bazı durumlarda diğer 3 tipide kullanabiliriz.
+
+**char** tipi çoğunlukla ASCII şemasında yer alan harfleri saklamak için kullanılır. Ancak -128'den 127'ye kadar küçük olan tamsayıları tutma içinde kullanılabilir. En az _1_ bayt alır.
+
+**int** en az 2 bayt alır. **short** en az 2 bayt alır. **long** en az 4 bayt alır.
+
+## Unsigned integers
+
+Yukarıdaki tüm veri türleri için, aralığı negatif bir sayı yerine 0'dan başlamak için başına `unsigned` anahtar kelimesini ekleyebiliriz.
+
+- `unsigned char` 0 ile 255 arasında olur.
+- `unsigned int` 0 ile 65,535 arasında olur.
+- `unsigned short` 0 ile 65,535 arasında olur.
+- `unsigned long` 0 ile 4,294,967,295 arasında olur.
+
+## Floating point numbers
+
+Kayan nokta türleri, tamsayıların yapabileceğinden çok daha büyük bir değer kümesini temsil edebilir ve tamsayıların yapamayacağı bir şey olan kesirleri de temsil edebilir.
+
+Aşağıda ki türler:
+
+- `float`
+- `double`
+- `long double`
+
+Ondalıklı sayıları temsil etmek için kullanılır. Hepsi hem pozitif hem de negatif sayıları temsil edebilir.
+
+<h2 align=center> Constants </h2>
+
+---
+
+Eğer değişkenimizin sabit yani değiştirilemez olmasını istiyorsak tanımlama yaparken ek olarak ilk kısıma `const` anahtar kelimesini eklememiz gerekir.
+
+> Örnek: `const int year = 2023;`
+
+sabit tanımlamanın bir başka yolu ise şöyledir:
+
+> Örnek: `#define year 2023;`
+
+<h2 align=center> Operators </h2>
+
+---
+
+C veriler üzerinde işlem yapabilmemiz için kullanabileceğimiz çok çeşitli operatörler sunar.
