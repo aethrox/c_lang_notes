@@ -59,7 +59,7 @@ int printf(const char *format, ...);
 
 > **Not:** Fonksiyon, Bir veya birden fazla kod satırının bir araya gelmesi ile belirli işlem sonucu argüman dönmesini sağlayan bir alt programcıktır.
 
-<h2 align=center id="naming"> Programming Naming Conventions </h2>
+<h2 align=center> Programming Naming Conventions </h2>
 
 ---
 
