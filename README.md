@@ -6,7 +6,8 @@
 
 ## **Table of Contents**
 
-1. Introduction to C
+0. Introduction to C
+1. Programming Naming Convention
 2. Variables and types
 3. Constants
 4. Operators
@@ -57,3 +58,53 @@ int printf(const char *format, ...);
 ```
 
 > **Not:** Fonksiyon, Bir veya birden fazla kod satırının bir araya gelmesi ile belirli işlem sonucu argüman dönmesini sağlayan bir alt programcıktır.
+
+<h2 align=center id="naming"> Programming Naming Conventions </h2>
+
+---
+
+Tam olarak programlamaya geçmeden önce bilmeniz gereken bir konu var. "Değişken İsimlendirme Kuralları" ve "Standartlar"
+
+Önemli kurallar şöyle:
+
+- Değişken isimlendirmesi yapılırken ASCII standardındaki alfanumeric karakterler ve \_ sembolü kullanılabilir (A-Z, a-z ve 0-9). (Türkçe diline özgü karakterler kullanılmaz -> ıİçÇöÖşŞüÜğĞ)
+- Değişken isimleri sayı ile başlayamaz. Değişken isimleri harf yada \_ ile başlayabilir.
+- Programlama diline ait kelimeler değişken olarak kullanılamaz. ( Örn: for kelimesi bir çok dilde döngü için kullanıldığı için kullanılamaz).
+- Değişken isimlerinde boşluk tuşu ve özel karakterler($..) kullanılmaz(\_hariç).
+  Çoğu programlama dili büyük küçük harf duyarlıdır. Değişken nasıl yazıldıysa o şekilde kullanılmalıdır.
+
+Fonksiyonlar, Sınıflar, Methodlar ve bunun gibi yapıları isimlendirme konusunda en çok tercih edilenler şunlar:
+
+- Camel Case
+- Snake Case
+- Kebap Case
+- Pascal Case
+
+## Camel Case
+
+Camel Case, sözcük küçük harfle başlar küçük harfle biter. Anca hemen arkasına bir sözcük daha gelecekse büyük harfle başlar.
+
+> Örnek: `firstName` ve `lastName`
+
+## Snake Case
+
+Snake Case, aynı "Camel Case" gibi sözcük küçük harf ile başlar ve biter. Ancak burada farklı olan şey birden fazla sözcük olduğunda sözcüklerin arasına (\_) "alt çizgi" gelir.
+
+> Örnek: `first_name` ve `last_name`
+
+## Kebap Case
+
+Kebap Case, aynı "Snake Case" gibi aslında hiç bir değişiklik yok tek fark sözcüklerin arasında (\_) kullanmak yerine (-) "çizgi" kullanılması.
+
+> Örnek: `first-name` ve `last-name`
+
+## Pascal Case
+
+Pascal Case, Sözcükler büyük harf ile başlar küçük harfle biter. Devamında ki sözcüklerde büyük harf ile başlayıp küçük harfle biter.
+
+> Örnek: `FirstName` ve `LastName`
+
+Ve son olarak öğrendiğiniz dilin kurallarını bilmek önemlidir.
+Bilmemeniz programınızın çalışmayacağı anlamına gelmez ancak programınızın kaynak kodu daha anlaşılabilir ve daha kurallı olur.
+
+Sağlıklı bir kod için yazım kurallarını bilelim lütfen 😉
