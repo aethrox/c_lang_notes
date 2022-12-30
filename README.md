@@ -44,4 +44,10 @@ int main(void){ // "main()" programımızın ana fonksiyonudur.
 }
 ```
 
+> "printf()" fonksiyonu **stdio.h** kütüphanesinin içerisinde şu şekilde tanımlanır 👇 (ileri sayfalarda aşağıda ki bilmediğiniz yapıları öğreniyor olacaksınız merak etmeyin 😉)
+
+```c
+int printf(const char *format, ...);
+```
+
 > **Not:** Fonksiyon, Bir veya birden fazla kod satırının bir araya gelmesi ile belirli işlem sonucu argüman dönmesini sağlayan bir alt programcıktır.
