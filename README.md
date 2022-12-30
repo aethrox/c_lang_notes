@@ -108,3 +108,7 @@ Ve son olarak öğrendiğiniz dilin kurallarını bilmek önemlidir.
 Bilmemeniz programınızın çalışmayacağı anlamına gelmez ancak programınızın kaynak kodu daha anlaşılabilir ve daha kurallı olur.
 
 Sağlıklı bir kod için yazım kurallarını bilelim lütfen 😉
+
+<h2 align=center> Variables and Types </h2>
+
+---
