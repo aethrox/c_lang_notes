@@ -186,3 +186,181 @@ sabit tanımlamanın bir başka yolu ise şöyledir:
 ---
 
 C veriler üzerinde işlem yapabilmemiz için kullanabileceğimiz çok çeşitli operatörler sunar.
+
+- arithmetic operators (Aritmetik operatörler)
+- comparison operators (Karşılaştırma operatörleri)
+- logical operators (Mantıksal operatörler)
+- compound assignment operators (Birleşik atama operatörleri)
+- bitwise operators (Daha sonra bakılacak.)
+- pointer operators (Daha sonra bakılacak.)
+- structure operators (Daha sonra bakılacak.)
+- miscellaneous operators (Daha sonra bakılacak.)
+
+## Aritmetik operatörler
+
+0. Atama operatörü (=) 👉 `a = b`
+1. Toplama operatörü (+) 👉 `a + b`
+2. Çıkarma operatörü (-) 👉 `a - b`
+3. Çarpma operatörü (*) 👉 `a * b`
+4. Bölme operatörü (/) 👉 `a / b`
+5. Mod alma operatörü (%) 👉 `a % b`
+
+## Karşılaştırma operatörleri
+
+0. Eşit operatörü (==) 👉 `a == b`
+1. Eşit değil operatörü (!=) 👉 `a != b`
+2. Büyüktür operatörü (>) 👉 `a > b`
+3. Küçüktür operatörü (<) 👉 `a < b`
+4. Büyüktür ve eşittir operatörü 👉 `a >= b`
+5. Küçüktür ve eşittir operatörü 👉 `a <= b`
+
+## Mantıksal operatörler
+
+0. Değil operatörü (!) 👉 `!a`
+1. Ve operatörü (&&) 👉 `a && b`
+2. Veya operatörü (||) 👉 `a || b`
+
+## Birleşik atama işlemleri
+
+0. Ekleyip atama operatörü (+=) 👉 `a += b`
+1. Çıkarıp atama operatörü (-=) 👉 `a -= b`
+2. Çarpıp atama operatörü (*=) 👉 `a *= b`
+3. Bölüp atama operatörü (/=) 👉 `a /= b`
+4. Mod alıp atama operatörü (%=) 👉 `a %= b`
+
+> Note: Operatörleri kullanırken mesela bir matematiksel işlem yaparken işlem önceliğine kesinlikle dikkat etmelisiniz!
+
+## Ternary operatörü
+
+if/else koşulunun aynısıdır fakat daha kısadır.
+
+<koşul> ? <eğer işlemi> : <değilse işlemi>
+
+```c
+  a ? b : c
+```
+
+## sizeof
+
+sizeof fonksiyonu verdiğiniz değişkenin veya türün boyutunu geri döndürür.
+
+```c
+#include <stdio.h>
+
+int main(void){
+  int age = 37;
+  printf("%ld\n", sizeof(age));
+  printf("%ld", sizeof(int));
+  return 0;
+}
+```
+
+<h2 align=center> Conditionals </h2>
+
+---
+
+Herhangi bir programlama dili, programcılara seçim yapma yeteneği sağlar. Verileri kontrol etmek ve bu verilerin durumuna göre seçimler yapmak istiyoruz.
+
+C bize bunu yapmak için 2 yol sunar.
+
+1. if/else
+2. switch
+
+## if/else
+
+Bir `if` koşulu ile bir şeyin doğru olup olmadığını kontrol edebilir ve ardından süslü parantez içerisindeki işlemi gerçekleştirebilir.
+
+```c
+  int a = 1;
+
+  if(a == 1){
+    /* do something */
+  }
+```
+
+Eğer koşul yanlış çıkar ise `else` bloğu kullanabiliriz.
+
+```c 
+  int a = 1;
+  
+  if(a == 2){
+    /* do something */
+  } else {
+    /* do something else */
+  }
+```
+
+Dikka etmeniz gereken bir husus koşul içerisinde `==` yerine `=` kullanmmayınız aksi takdirde koşul her zaman doğru olacaktır. Ya da değişkenimize 0 atadağımızı düşünelim. (0 = false) eğer böyle bir hata yaparsak aşağıdaki gibi `if` koşulu hiç bir zaman çalışmayacaktır.
+
+```c
+  int a = 0;
+
+  if(a = 0){
+    /* never invoked */
+  }
+```
+
+Ayrıca birden çok `if` bloğunu bir araya getirerek kullanabiliriz. Nasıl yani?? Aşağıya bakın 👇
+
+```c
+  int a = 1;
+
+  if(a == 2){
+    /* do something */
+  } else if (a == 1){
+    /* do something else */
+  } else {
+    /* do something else again */
+  }
+```
+
+## switch
+
+Belki bir değişkenin tam değerini kontrol etmeniz gerektiğinde birden çok `if/else` bloğu kullanmak durumunda kalacaksınız ve bu sizin için gereksiz kod kirliliği olabilir. İşte tam bu sorun için `switch/case` yapısını kullanabilirsiniz.
+
+Koşul olarak bir değişken veya beklediğiniz her değer için bir `case` bloğu açmanız gerekiyor.
+
+```c
+  int a = 1;
+
+  switch(a){
+    case 0: 
+      /* do something */
+      break;
+    case 1:
+      /* do something else */
+      break;
+    case 2:
+      /* do something else */
+      break;
+  }
+```
+
+Bir `case` bloğu karşılandıktan sonra diğer bloğun çalışmaması için `break` anahtar kelimesini kullanmamız gerekiyor. Aksi takdirde diğer bloklarda sırasıyla çalışacaktır. (break = kırmak)
+
+Ve `switch` koşulumuzun sonunda eğer varsayılan olarak yani her ne olursa olsun çalışacak bir blok istiyorsak `default` bloğunu kullanabiliriz.
+
+```c
+  int a = 1;
+
+  switch(a){
+    case 0:
+      /* do something */
+      break;
+    case 1:
+      /* do something else */
+      break;
+    case 2:
+      /* do something else */
+      break;
+    default:
+      /* do something finally*/
+      break;
+  }
+```
+
+<h2 align=center> Loops </h2>
+
+---
+
+C bize bir işi tekrar tekrar gerçekleştirmek için üç yol sunar:
