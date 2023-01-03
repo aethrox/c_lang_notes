@@ -382,3 +382,176 @@ Kullanımı aşağıdaki gibidir:
 ```
 
 **İlk öncelikle `int i = 0;` ile başlangıç değerimizi tanımlarız.** _(Tabii ki bu değişken tanımlama işlemini dışarıdada yapabilirsiniz. Daha sonra geleceğim bu konuya..)_ **`i <= 10` değerimiz 10'dan küçük veya eşit değilse devam eder. `i++` ile değerimizi `1` arttırırız.**
+
+## While Döngüsü
+
+`while` döngüsü `for` döngüsünden bir tık daha kolaydır.
+
+```c
+  while(i < 10){
+    /* do something */
+  }
+```
+
+Eğer ki `i` değeri arttırılmazsa sonsuz döngü oluşur. Ve program düzgün çalışmaz.
+
+Doğru olan `while` döngü yapısı:
+
+```c
+  int i = 0;
+
+  while(i < 10){
+    /* do something */
+
+    i++;
+  }
+```
+
+## Do While Döngüsü
+
+While döngülerine alternatif olarak ve önemli bir farkı olan yapı olan `do while` döngüsü bir işlemi öncelikle yapıp daha sonra tekrarlamasını isteyebilirsiniz.
+
+```c
+  int i = 0;
+
+  do {
+    /* do something */
+
+    i++;
+  } while (i < 10);
+```
+
+`/* do something */` bloğu koşul kontrolü yapılmadan önce en az 1 kere çalıştırılır. Ve `i` değeri `10` olana kadar işlem tekrarlanacak.
+
+## Break kullanarak döngüyü sonlandırmak
+
+C içerisindeki tüm döngüleri sonlandırmak yada çıkmak için `break` anahtar kelimesini kullanabiliriz.
+
+```c
+  for(int i = 0; i <= 10; i++){
+    if(i == 4 && someVariable == 10){
+      break;
+    }
+  }
+```
+
+```c
+  int i = 0;
+
+  while(1){
+    /* do something */
+
+    i++;
+    if(i == 10) break;  
+  }
+```
+
+<h2 align=center> Arrays </h2>
+
+---
+
+`array` yani dizi birden çok veriyi saklamamızı sağlayan yapılardır.
+
+Dizideki her değer, C'de aynı tür olmalıdır.
+
+```c
+  int prices[5];
+```
+
+```c
+  const int SIZE = 5;
+  int prices[SIZE];
+```
+
+Her zaman dizinin boyutunu belirtmelisiniz. C dinamik dizin yapısı kullanmaz.
+
+Bir dizinin içerisine şu şekilde atama yapabiliriz:
+
+```c
+  int prices[5] = {1, 2, 3, 4, 5};
+```
+
+Tanımlamadan sonra şu şekildede atama yapabiliriz:
+
+```c
+  int prices[5];
+
+  prices[0] = 1;
+  prices[1] = 2;
+  prices[2] = 3;
+  prices[3] = 4;
+  prices[4] = 5;
+```
+
+Ancak bu atama işlemi uzun süreceğinden pratik bir yöntem olarak şu şekildede yapabilirsiniz:
+
+```c
+  int prices[5];
+
+  for(int i = 0; i < 5; i++){
+    prices[i] = i + 1;
+  }
+```
+
+Dizi içerisindeki değerleri görmek için `index` değerini `[]` içerisine yazarak görebilirsiniz.
+
+```c
+  prices[0] /* array item value 1 */
+  prices[1] /* array item value 2 */
+```
+
+> Note: Diziler her zaman 0'dan başlar. Yani boyutu 5 olan bir dizinin index değerleri şu şekildedir: 0,1,2,3,4
+
+<h2 align=center> Strings </h2>
+
+---
+
+C'de dizeler özel bir dizi türüdür: Bir dize, karakter değerlerinden oluşur.
+
+```c
+  char name[7];
+```
+
+Dizeleri normal bir dizi gibi tanımlayabilirsiniz:
+
+```c
+  char name[5] = {"F", "l", "a", "s", "h"};
+```
+
+Veya daha iyi bir şekilde tanımlanabilir:
+
+```c
+  char name[5] = "Flash";
+```
+
+`%s` kullanılarak dizi yazdırılabilir:
+
+```c
+  char name[6] = "Flash";
+
+  printf("%s", name);
+```
+
+Dizenin uzunluğunun 5 olduğunu fark etmiş olmanız gerekiyor. ama "neden dizinin uzunluğunu 6 yaptık?" diye soruyor olabilirsiniz. Çünkü bunun sebebi `string` yapımız sonlandırılırken `0` ile sonlandırılıyor yani fazladan bir boşluk daha bırakmamız gerekiyor.
+
+Dize tanımlanırken bu önemli bir konudur.
+
+C tarafından sağlanan önemli bir standart modül vardır: `string.h`
+
+Bu modül önemlidir. Dize oluştururken alt düzey ayrıntılardan kurtarır ve bir dizi kolaylık sağlar.
+
+Modül'ü programımızın en üst satırına ekleyebiliriz:
+
+```c
+#include <string.h>
+```
+
+Modül'ü eklediğinizde programa şu fonksiyonlar dahil olur:
+
+- `strcpy` 👉 diziyi başka bir dizgenin üzerine kopyalamamızı sağlar.
+- `strcat` 👉 diziyi başka bir diziye eklememizi sağlar.
+- `strcmp` 👉 iki dizgeyi karşılaştırmamızı sağlar.
+- `strncmp` 👉 iki dizge ilk karakterlerini karşılaştırmamızı sağlar.
+- `strlen` 👉 bir dizgenin uzunluğunu hesaplamamızı sağlar.
+
+ve çok daha fazlası var.
