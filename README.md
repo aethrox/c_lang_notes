@@ -555,3 +555,8 @@ Modül'ü eklediğinizde programa şu fonksiyonlar dahil olur:
 - `strlen` 👉 bir dizgenin uzunluğunu hesaplamamızı sağlar.
 
 ve çok daha fazlası var.
+
+<h2 align=center> Pointers </h2>
+
+---
+
