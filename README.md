@@ -363,4 +363,22 @@ Ve `switch` koşulumuzun sonunda eğer varsayılan olarak yani her ne olursa ols
 
 ---
 
-C bize bir işi tekrar tekrar gerçekleştirmek için üç yol sunar:
+C bize bir işlemi döngü içerisine almak için üç yol sunar:
+
+1. For Loops
+2. While Loops
+3. Do While Loops
+
+## For Döngüsü
+
+En çok kullanılan döngü `for` döngüsüdür. 
+
+Kullanımı aşağıdaki gibidir:
+
+```c
+  for(int i = 0; i <= 10; i++) {
+    /* instructions to be repeated */
+  }
+```
+
+**İlk öncelikle `int i = 0;` ile başlangıç değerimizi tanımlarız.** _(Tabii ki bu değişken tanımlama işlemini dışarıdada yapabilirsiniz. Daha sonra geleceğim bu konuya..)_ **`i <= 10` değerimiz 10'dan küçük veya eşit değilse devam eder. `i++` ile değerimizi `1` arttırırız.**
