@@ -560,3 +560,25 @@ ve çok daha fazlası var.
 
 ---
 
+İşaretciler C'nin en kafa karıştırıcı/zorlayıcı kısımlarından biridir. Özellikle programlama konusunda yeniyseniz. aynı zamanda Python ve JavaScript gibi üst düzey programlama dillerinden geliyorsanız.
+
+İşaretci, değişken içeren bir bellek bloğunun adresidir.
+
+Bir değişkenin bellek adresini almak istersek eğer `&` opereratörünü kullanabiliriz.
+
+```c
+  int age = 24;
+
+  printf("%p", &age);
+```
+
+Değişkenin adres değerini yazdırmak için `%p` biçimini kullanırız.
+
+Adresi başka bir değişkene atayabiliriz.
+
+```c
+  int age = 24;
+
+  int *ageAdress = &age;
+```
+
