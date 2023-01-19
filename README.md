@@ -556,7 +556,7 @@ Modül'ü eklediğinizde programa şu fonksiyonlar dahil olur:
 
 ve çok daha fazlası var.
 
-<h2 align=center> Pointers </h2>
+<!-- <h2 align=center> Pointers </h2>
 
 ---
 
@@ -580,5 +580,4 @@ Adresi başka bir değişkene atayabiliriz.
   int age = 24;
 
   int *ageAdress = &age;
-```
-
+``` -->
