@@ -556,6 +556,8 @@ Modül'ü eklediğinizde programa şu fonksiyonlar dahil olur:
 
 ve çok daha fazlası var.
 
+**Konuların devamı hazırlanıyor..**
+
 <!-- <h2 align=center> Pointers </h2>
 
 ---
